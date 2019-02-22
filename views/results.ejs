@@ -2,7 +2,7 @@
 <head>
 <style>
  body {
-        background-color: #F3EBF6;
+        background-color: CBECF6;
         font-family: 'Ubuntu', sans-serif;
     }
     
@@ -18,7 +18,7 @@
 
 .sidenav {
     height: 100%;
-    width: 200px;
+    width: 300px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -41,16 +41,18 @@
 }
 
 li.margin{
-margin-left:200px;
+margin-left:700px;
 }
+li.unstyled{
+list-style-type: none;
 
+}
 </style>
 </head>
 
-<body bgcolor="#F3EBF6">
+<body bgcolor="CBECF6">
 <p><span id="span"></span></p>
 <div class="sidenav">
-  <a href='/'>Home Page</a>
   <br>
   <a href='/search'>Search Movie</a>
   <br>
@@ -62,10 +64,17 @@ margin-left:200px;
 
 <% data["Search"].forEach(function(movie){ %>
 
-<li class='margin'><%=movie["Title"]%></li>
+<li class='margin'>
+
+<h2><%=movie["Title"]%> - <%=movie["Year"]%></h2>
+
+</li>
+<li class='margin' class="unstyled">
+<img src='<%=movie["Poster"]%>'>;
+</li>
 
 <% }) %>
 
-<a href="/">Search Again<a/>
+<a align='center' href="/">Search Again<a/>
 </body>
 </html>

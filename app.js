@@ -32,7 +32,7 @@ app.get("/results",function(req,res)
 		
 		var data = JSON.parse(body);
 		
-		//console.log(results);	
+		console.log(data);	
 	    //res.send(results["Search"][0]);
 		
 		
